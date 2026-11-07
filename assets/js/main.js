@@ -188,7 +188,7 @@
       '<div class="member-photo">' + avatar(m.photo, "members", m.name) + "</div>" +
       badge(m) + "<h3>" + esc(m.name) + "</h3>" +
       '<p class="city">' + esc(m.city) + "</p>" +
-      '<p class="org">' + esc(m.designation || "") + (m.organization ? " · " + esc(m.organization) : "") + "</p>" +
+      '<p class="org">' + [m.designation, m.organization].filter(Boolean).map(esc).join(" · ").split(" · ").join("<br>") + "</p>" +
       "</article>";
   }
   function newsCard(n) {
@@ -288,10 +288,8 @@
   }
   function leaders() { return visible(D.leadership).sort(function (a, b) { return (a.order || 99) - (b.order || 99); }); }
   function byId(id) { return leaders().filter(function (p) { return p.id === id; })[0]; }
-  /* Top row of the committee: President, Senior VP (or VP), General Secretary, Organizing Secretary */
-  function topLeaders() {
-    return [byId("president"), byId("senior-vp") || byId("vp"), byId("gs"), byId("org-sec")].filter(Boolean);
-  }
+  /* Top row of the committee page: the first 4 by order; the rest go in the second row */
+  function topLeaders() { return leaders().slice(0, 4); }
   function newsSorted() { return visible(D.news).sort(function (a, b) { return (parseDate(b.date) || 0) - (parseDate(a.date) || 0); }); }
 
   function renderHome() {
