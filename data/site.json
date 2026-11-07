@@ -1,0 +1,239 @@
+{
+  "settings": {
+    "name": "Pennsylvania Bangladesh Press Club",
+    "short": "PBPC",
+    "motto": "Truth | Responsibility | Community",
+    "email": "pabangladeshpressclub@gmail.com",
+    "location": "Pennsylvania, USA",
+    "website": "pabangladeshpressclub.github.io",
+    "social": {
+      "facebook": "",
+      "youtube": "",
+      "x": "",
+      "instagram": ""
+    },
+    "applicationFormUrl": "",
+    "contactFormEndpoint": "",
+    "showDrafts": true
+  },
+  "leadership": [
+    {
+      "id": "president",
+      "order": 1,
+      "draft": true,
+      "name": "Name to be added",
+      "nameBn": "নাম যুক্ত করা হবে",
+      "role": "President",
+      "roleBn": "সভাপতি",
+      "organization": "Media organization",
+      "photo": "",
+      "bio": "Short biography approved by the Executive Committee will appear here."
+    },
+    {
+      "id": "senior-vp",
+      "order": 2,
+      "draft": true,
+      "name": "Name to be added",
+      "nameBn": "নাম যুক্ত করা হবে",
+      "role": "Senior Vice President",
+      "roleBn": "সিনিয়র সহ-সভাপতি",
+      "organization": "Media organization",
+      "photo": "",
+      "bio": ""
+    },
+    {
+      "id": "vp",
+      "order": 3,
+      "draft": true,
+      "name": "Name to be added",
+      "nameBn": "নাম যুক্ত করা হবে",
+      "role": "Vice President",
+      "roleBn": "সহ-সভাপতি",
+      "organization": "Media organization",
+      "photo": "",
+      "bio": ""
+    },
+    {
+      "id": "gs",
+      "order": 4,
+      "draft": true,
+      "name": "Name to be added",
+      "nameBn": "নাম যুক্ত করা হবে",
+      "role": "General Secretary",
+      "roleBn": "সাধারণ সম্পাদক",
+      "organization": "Media organization",
+      "photo": "",
+      "bio": ""
+    },
+    {
+      "id": "js",
+      "order": 5,
+      "draft": true,
+      "name": "Name to be added",
+      "nameBn": "নাম যুক্ত করা হবে",
+      "role": "Joint Secretary",
+      "roleBn": "যুগ্ম সম্পাদক",
+      "organization": "Media organization",
+      "photo": "",
+      "bio": ""
+    },
+    {
+      "id": "treasurer",
+      "order": 6,
+      "draft": true,
+      "name": "Name to be added",
+      "nameBn": "নাম যুক্ত করা হবে",
+      "role": "Treasurer",
+      "roleBn": "কোষাধ্যক্ষ",
+      "organization": "Media organization",
+      "photo": "",
+      "bio": ""
+    },
+    {
+      "id": "org-sec",
+      "order": 7,
+      "draft": true,
+      "name": "Name to be added",
+      "nameBn": "নাম যুক্ত করা হবে",
+      "role": "Organizing Secretary",
+      "roleBn": "সাংগঠনিক সম্পাদক",
+      "organization": "Media organization",
+      "photo": "",
+      "bio": ""
+    },
+    {
+      "id": "pr-sec",
+      "order": 8,
+      "draft": true,
+      "name": "Name to be added",
+      "nameBn": "নাম যুক্ত করা হবে",
+      "role": "Public Relations Secretary",
+      "roleBn": "জনসংযোগ সম্পাদক",
+      "organization": "Media organization",
+      "photo": "",
+      "bio": ""
+    },
+    {
+      "id": "exec-member",
+      "order": 9,
+      "draft": true,
+      "name": "Name to be added",
+      "nameBn": "নাম যুক্ত করা হবে",
+      "role": "Executive Member",
+      "roleBn": "কার্যনির্বাহী সদস্য",
+      "organization": "Media organization",
+      "photo": "",
+      "bio": ""
+    }
+  ],
+  "messages": {
+    "president": {
+      "title": "President's Message",
+      "titleBn": "সভাপতির বার্তা",
+      "text": ""
+    },
+    "generalSecretary": {
+      "title": "General Secretary's Message",
+      "titleBn": "সাধারণ সম্পাদকের বার্তা",
+      "text": ""
+    }
+  },
+  "membership": [
+    {
+      "name": "Regular Member",
+      "nameBn": "সাধারণ সদস্য",
+      "fee": "$75",
+      "period": "for 2 years",
+      "periodBn": "২ বছরের জন্য",
+      "eligibility": "Working journalists and media professionals of Bangladeshi origin living in Pennsylvania.",
+      "eligibilityBn": "পেনসিলভানিয়ায় বসবাসরত বাংলাদেশি বংশোদ্ভূত কর্মরত সাংবাদিক ও গণমাধ্যমকর্মী।"
+    },
+    {
+      "name": "Life Member",
+      "nameBn": "আজীবন সদস্য",
+      "fee": "$600",
+      "period": "one time",
+      "periodBn": "এককালীন",
+      "eligibility": "Regular members who wish to support PBPC with a one-time lifetime membership.",
+      "eligibilityBn": "যেসব সাধারণ সদস্য এককালীন আজীবন সদস্যপদ নিয়ে PBPC-কে সহায়তা করতে চান।",
+      "featured": true
+    },
+    {
+      "name": "Student Member",
+      "nameBn": "ছাত্র সদস্য",
+      "fee": "Free",
+      "period": "with valid student ID",
+      "periodBn": "বৈধ ছাত্র পরিচয়পত্রসহ",
+      "eligibility": "Students of journalism, communication or media studies.",
+      "eligibilityBn": "সাংবাদিকতা, যোগাযোগ বা গণমাধ্যম বিষয়ে অধ্যয়নরত শিক্ষার্থী।"
+    }
+  ],
+  "events": [
+    {
+      "id": "agm",
+      "draft": true,
+      "title": "Annual General Meeting",
+      "titleBn": "বার্ষিক সাধারণ সভা",
+      "date": "",
+      "time": "To be announced",
+      "venue": "Venue to be announced",
+      "image": "",
+      "registrationUrl": "",
+      "description": "Date, time and venue will be published after approval by the Executive Committee."
+    }
+  ],
+  "news": [
+    {
+      "id": "website-launch",
+      "draft": true,
+      "title": "PBPC launches its official website",
+      "titleBn": "PBPC-এর অফিসিয়াল ওয়েবসাইট চালু",
+      "date": "2026-11-06",
+      "category": "Announcement",
+      "author": "PBPC",
+      "image": "",
+      "summary": "The Pennsylvania Bangladesh Press Club now has an official website for news, events and membership.",
+      "body": "The Pennsylvania Bangladesh Press Club now has an official website. Here you will find club announcements, upcoming programs, photos from our events and information on how to become a member.\n\nPlease review this sample article and replace it with the official announcement approved by the Executive Committee."
+    }
+  ],
+  "members": [
+    {
+      "id": "sample-1",
+      "draft": true,
+      "name": "Member name",
+      "city": "Philadelphia, PA",
+      "organization": "Media organization",
+      "designation": "Journalist",
+      "photo": ""
+    },
+    {
+      "id": "sample-2",
+      "draft": true,
+      "name": "Member name",
+      "city": "Upper Darby, PA",
+      "organization": "Media organization",
+      "designation": "Reporter",
+      "photo": ""
+    },
+    {
+      "id": "sample-3",
+      "draft": true,
+      "name": "Member name",
+      "city": "Allentown, PA",
+      "organization": "Media organization",
+      "designation": "Photojournalist",
+      "photo": ""
+    },
+    {
+      "id": "sample-4",
+      "draft": true,
+      "name": "Member name",
+      "city": "Pittsburgh, PA",
+      "organization": "Media organization",
+      "designation": "Content Creator",
+      "photo": ""
+    }
+  ],
+  "gallery": [],
+  "credentials": []
+}
