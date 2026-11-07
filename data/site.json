@@ -30,20 +30,8 @@
       "bio": "Short biography approved by the Executive Committee will appear here."
     },
     {
-      "id": "senior-vp",
-      "order": 2,
-      "draft": true,
-      "name": "Name to be added",
-      "nameBn": "নাম যুক্ত করা হবে",
-      "role": "Senior Vice President",
-      "roleBn": "সিনিয়র সহ-সভাপতি",
-      "organization": "Media organization",
-      "photo": "",
-      "bio": ""
-    },
-    {
       "id": "vp",
-      "order": 3,
+      "order": 2,
       "draft": true,
       "name": "Name to be added",
       "nameBn": "নাম যুক্ত করা হবে",
@@ -55,7 +43,7 @@
     },
     {
       "id": "gs",
-      "order": 4,
+      "order": 3,
       "draft": true,
       "name": "Name to be added",
       "nameBn": "নাম যুক্ত করা হবে",
@@ -67,12 +55,24 @@
     },
     {
       "id": "js",
-      "order": 5,
+      "order": 4,
       "draft": true,
       "name": "Name to be added",
       "nameBn": "নাম যুক্ত করা হবে",
       "role": "Joint Secretary",
       "roleBn": "যুগ্ম সম্পাদক",
+      "organization": "Media organization",
+      "photo": "",
+      "bio": ""
+    },
+    {
+      "id": "org-sec",
+      "order": 5,
+      "draft": true,
+      "name": "Name to be added",
+      "nameBn": "নাম যুক্ত করা হবে",
+      "role": "Organizing Secretary",
+      "roleBn": "সাংগঠনিক সম্পাদক",
       "organization": "Media organization",
       "photo": "",
       "bio": ""
@@ -90,20 +90,8 @@
       "bio": ""
     },
     {
-      "id": "org-sec",
-      "order": 7,
-      "draft": true,
-      "name": "Name to be added",
-      "nameBn": "নাম যুক্ত করা হবে",
-      "role": "Organizing Secretary",
-      "roleBn": "সাংগঠনিক সম্পাদক",
-      "organization": "Media organization",
-      "photo": "",
-      "bio": ""
-    },
-    {
       "id": "pr-sec",
-      "order": 8,
+      "order": 7,
       "draft": true,
       "name": "Name to be added",
       "nameBn": "নাম যুক্ত করা হবে",
@@ -114,7 +102,19 @@
       "bio": ""
     },
     {
-      "id": "exec-member",
+      "id": "exec-member-1",
+      "order": 8,
+      "draft": true,
+      "name": "Name to be added",
+      "nameBn": "নাম যুক্ত করা হবে",
+      "role": "Executive Member",
+      "roleBn": "কার্যনির্বাহী সদস্য",
+      "organization": "Media organization",
+      "photo": "",
+      "bio": ""
+    },
+    {
+      "id": "exec-member-2",
       "order": 9,
       "draft": true,
       "name": "Name to be added",
@@ -197,6 +197,15 @@
     }
   ],
   "members": [
+    {
+      "id": "nazmul-hasan-babu",
+      "draft": false,
+      "name": "Nazmul Hasan Babu",
+      "city": "Pennsylvania",
+      "organization": "New York Voice Bangla · Pennsylvania Bangla News · Bangla Media Hub",
+      "designation": "",
+      "photo": ""
+    },
     {
       "id": "sample-1",
       "draft": true,
