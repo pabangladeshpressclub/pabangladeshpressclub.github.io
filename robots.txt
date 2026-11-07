@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://pabangladeshpressclub.github.io/sitemap.xml
