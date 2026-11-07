@@ -429,3 +429,15 @@ details.faq[open] summary { border-bottom: 1px solid var(--line); margin-bottom:
 .leaders.row-rest .leader-card h3 { font-size: .98rem; }
 @media (max-width: 900px) { .leaders.row-top { grid-template-columns: repeat(2, minmax(0, 1fr)); } .leaders.row-rest { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .leaders.row-rest { grid-template-columns: repeat(2, minmax(0, 1fr)); } .leaders .leader-card:nth-child(3) { display: flex; } }
+
+/* v3: wider home leader cards, 3x3 committee grid, wider member cards */
+#home-leaders { max-width: none; gap: 22px; }
+#home-leaders .leader-photo { aspect-ratio: 3 / 2; }
+.leader-photo img, .member-photo img { object-position: center 20%; }
+.leader-rows { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; max-width: 940px; margin: 0 auto; }
+.leader-rows > .leaders { display: contents; }
+.leader-rows .leader-photo { aspect-ratio: 4 / 3; }
+.leader-rows .leaders .leader-card h3 { font-size: 1.04rem; }
+@media (max-width: 640px) { .leader-rows { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } }
+.members-row { grid-auto-columns: minmax(215px, 1fr); }
+.member-photo { aspect-ratio: 5 / 4; }
