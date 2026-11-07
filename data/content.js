@@ -23,9 +23,9 @@ window.PBPC = {
     name: "Pennsylvania Bangladesh Press Club",
     short: "PBPC",
     motto: "Truth | Responsibility | Community",
-    email: "info@pbpc.org",               // ← change to the real club email (e.g. pbpc.press@gmail.com)
+    email: "pabangladeshpressclub@gmail.com",
     location: "Pennsylvania, USA",
-    website: "www.pbpc.org",
+    website: "pabangladeshpressclub.github.io",
 
     social: {                              // leave "" to hide an icon
       facebook: "",
