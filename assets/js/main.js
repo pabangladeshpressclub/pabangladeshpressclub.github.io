@@ -287,10 +287,17 @@
       .sort(function (a, b) { return parseDate(b.date) - parseDate(a.date); });
   }
   function leaders() { return visible(D.leadership).sort(function (a, b) { return (a.order || 99) - (b.order || 99); }); }
+  function byId(id) { return leaders().filter(function (p) { return p.id === id; })[0]; }
+  /* Top row of the committee: President, Senior VP (or VP), General Secretary, Organizing Secretary */
+  function topLeaders() {
+    return [byId("president"), byId("senior-vp") || byId("vp"), byId("gs"), byId("org-sec")].filter(Boolean);
+  }
   function newsSorted() { return visible(D.news).sort(function (a, b) { return (parseDate(b.date) || 0) - (parseDate(a.date) || 0); }); }
 
   function renderHome() {
-    fill("#home-leaders", leaders().slice(0, 3).map(function (p) { return leaderCard(p); }).join(""));
+    var homeL = [byId("president"), byId("gs")].filter(Boolean);
+    if (!homeL.length) homeL = leaders().slice(0, 2);
+    fill("#home-leaders", homeL.map(function (p) { return leaderCard(p); }).join(""));
     var up = upcoming();
     fill("#home-events", up.length ? eventCard(up[0]) : empty("empty.events"));
     fill("#home-fees", (D.membership || []).map(feeCard).join(""));
@@ -300,7 +307,10 @@
     fill("#home-news", ns.length ? ns.slice(0, 3).map(newsCard).join("") : empty("empty.news"));
   }
   function renderLeadership() {
-    fill("#leaders-all", leaders().map(function (p) { return leaderCard(p, true); }).join(""));
+    var top = topLeaders(), rest = leaders().filter(function (p) { return top.indexOf(p) < 0; });
+    var la = $("#leaders-all"); if (la) la.className = "leader-rows";
+    fill("#leaders-all", '<div class="leaders row-top">' + top.map(function (p) { return leaderCard(p, true); }).join("") + "</div>" +
+      (rest.length ? '<div class="leaders row-rest">' + rest.map(function (p) { return leaderCard(p, true); }).join("") + "</div>" : ""));
     var msgs = D.messages || {}, h = "";
     Object.keys(msgs).forEach(function (k) { var m = msgs[k]; if (m && m.text) h += '<article class="message"><h3>' + esc(L(m, "title")) + "</h3><p>" + esc(m.text).replace(/\n\n/g, "</p><p>") + "</p></article>"; });
     fill("#leader-messages", h);
