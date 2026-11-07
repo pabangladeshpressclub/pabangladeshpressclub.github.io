@@ -420,3 +420,12 @@ details.faq[open] summary { border-bottom: 1px solid var(--line); margin-bottom:
 @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .ft-brand img { width: 80px; height: 80px; } }
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+
+/* committee layout: home shows 2 leaders; leadership page shows 4 on top, the rest below */
+#home-leaders { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 520px; }
+.leader-rows { display: grid; gap: 24px; }
+.leaders.row-top { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.leaders.row-rest { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; }
+.leaders.row-rest .leader-card h3 { font-size: .98rem; }
+@media (max-width: 900px) { .leaders.row-top { grid-template-columns: repeat(2, minmax(0, 1fr)); } .leaders.row-rest { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .leaders.row-rest { grid-template-columns: repeat(2, minmax(0, 1fr)); } .leaders .leader-card:nth-child(3) { display: flex; } }
