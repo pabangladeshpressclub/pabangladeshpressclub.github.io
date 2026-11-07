@@ -1,0 +1,184 @@
+media:
+  input: assets/photos
+  output: /assets/photos
+
+content:
+  - name: site
+    label: PBPC Website
+    type: file
+    path: data/site.json
+    fields:
+      - name: settings
+        label: Club Settings
+        type: object
+        fields:
+          - { name: name, label: "Club name", type: string }
+          - { name: short, label: "Short name", type: string }
+          - { name: motto, label: "Motto", type: string }
+          - { name: email, label: "Email", type: string }
+          - { name: location, label: "Location", type: string }
+          - { name: website, label: "Website address", type: string }
+          - name: social
+            label: Social media links (leave empty to hide)
+            type: object
+            fields:
+              - { name: facebook, label: "Facebook", type: string }
+              - { name: youtube, label: "YouTube", type: string }
+              - { name: x, label: "X (Twitter)", type: string }
+              - { name: instagram, label: "Instagram", type: string }
+          - { name: applicationFormUrl, label: "Membership application form link (Google Form)", type: string }
+          - { name: contactFormEndpoint, label: "Contact form endpoint (Formspree)", type: string }
+          - { name: showDrafts, label: "Show sample entries", type: boolean }
+
+      - name: leadership
+        label: Committee (Leadership)
+        type: object
+        list: true
+        fields:
+          - { name: id, label: "ID (short, no spaces)", type: string }
+          - { name: order, label: "Order (1 shows first)", type: number }
+          - { name: draft, label: "Sample entry (untick when real)", type: boolean }
+          - { name: name, label: "Name (English)", type: string }
+          - { name: nameBn, label: "Name (Bangla)", type: string }
+          - { name: role, label: "Position (English)", type: string }
+          - { name: roleBn, label: "Position (Bangla)", type: string }
+          - { name: organization, label: "Media organization", type: string }
+          - name: photo
+            label: Photo
+            type: image
+            options:
+              path: assets/photos/leaders
+          - { name: bio, label: "Short biography", type: text }
+
+      - name: messages
+        label: Leadership Messages
+        type: object
+        fields:
+          - name: president
+            label: President's Message
+            type: object
+            fields:
+              - { name: title, label: "Title", type: string }
+              - { name: titleBn, label: "Title (Bangla)", type: string }
+              - { name: text, label: "Message", type: text }
+          - name: generalSecretary
+            label: General Secretary's Message
+            type: object
+            fields:
+              - { name: title, label: "Title", type: string }
+              - { name: titleBn, label: "Title (Bangla)", type: string }
+              - { name: text, label: "Message", type: text }
+
+      - name: membership
+        label: Membership Fees
+        type: object
+        list: true
+        fields:
+          - { name: name, label: "Category (English)", type: string }
+          - { name: nameBn, label: "Category (Bangla)", type: string }
+          - { name: fee, label: "Fee (e.g. $75 or Free)", type: string }
+          - { name: period, label: "Period (English)", type: string }
+          - { name: periodBn, label: "Period (Bangla)", type: string }
+          - { name: eligibility, label: "Eligibility (English)", type: text }
+          - { name: eligibilityBn, label: "Eligibility (Bangla)", type: text }
+          - { name: featured, label: "Highlight this card", type: boolean }
+
+      - name: news
+        label: News & Updates
+        type: object
+        list: true
+        fields:
+          - { name: id, label: "ID (short, no spaces, e.g. agm-2026)", type: string }
+          - { name: draft, label: "Sample entry (untick when real)", type: boolean }
+          - { name: title, label: "Title (English)", type: string }
+          - { name: titleBn, label: "Title (Bangla)", type: string }
+          - { name: date, label: "Date", type: date }
+          - name: category
+            label: Category
+            type: select
+            options:
+              values: [Announcement, Organizational News, Member Achievement, Press Release, Events & Activities, Community News]
+          - { name: author, label: "Author", type: string }
+          - name: image
+            label: Photo
+            type: image
+            options:
+              path: assets/photos/news
+          - { name: summary, label: "Short summary", type: text }
+          - { name: body, label: "Full article", type: text }
+
+      - name: events
+        label: Events
+        type: object
+        list: true
+        fields:
+          - { name: id, label: "ID (short, no spaces)", type: string }
+          - { name: draft, label: "Sample entry (untick when real)", type: boolean }
+          - { name: title, label: "Title (English)", type: string }
+          - { name: titleBn, label: "Title (Bangla)", type: string }
+          - { name: date, label: "Date", type: date }
+          - { name: time, label: "Time (e.g. 3:00 PM – 7:00 PM)", type: string }
+          - { name: venue, label: "Venue", type: string }
+          - name: image
+            label: Photo / banner
+            type: image
+            options:
+              path: assets/photos/events
+          - { name: registrationUrl, label: "Registration link (optional)", type: string }
+          - { name: description, label: "Description", type: text }
+
+      - name: gallery
+        label: Photo Gallery
+        type: object
+        list: true
+        fields:
+          - { name: album, label: "Album name", type: string }
+          - name: category
+            label: Category
+            type: select
+            options:
+              values: [Annual General Meetings, Press Conferences, Leadership Meetings, Community Events, Workshops & Training, Awards & Recognition, Cultural Programs, Networking Events]
+          - { name: date, label: "Date", type: date }
+          - name: photos
+            label: Photos
+            type: object
+            list: true
+            fields:
+              - name: image
+                label: Photo
+                type: image
+                options:
+                  path: assets/photos/gallery
+              - { name: caption, label: "Caption", type: string }
+
+      - name: members
+        label: Member Directory
+        type: object
+        list: true
+        fields:
+          - { name: id, label: "ID (short, no spaces)", type: string }
+          - { name: draft, label: "Sample entry (untick when real)", type: boolean }
+          - { name: name, label: "Name", type: string }
+          - { name: city, label: "City (e.g. Philadelphia, PA)", type: string }
+          - { name: organization, label: "Media organization", type: string }
+          - { name: designation, label: "Designation", type: string }
+          - name: photo
+            label: Photo
+            type: image
+            options:
+              path: assets/photos/members
+
+      - name: credentials
+        label: Press IDs (for verification)
+        type: object
+        list: true
+        fields:
+          - { name: id, label: "Press ID number", type: string }
+          - { name: name, label: "Name", type: string }
+          - { name: designation, label: "Designation", type: string }
+          - name: status
+            label: Status
+            type: select
+            options:
+              values: [valid, revoked]
+          - { name: expires, label: "Expires on", type: date }
