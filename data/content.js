@@ -84,7 +84,8 @@ window.PBPC = {
     { id: "pr-sec", order: 8, draft: true,
       name: "Name to be added", nameBn: "নাম যুক্ত করা হবে",
       role: "Public Relations Secretary", roleBn: "জনসংযোগ সম্পাদক",
-      organization: "Media organization", photo: "", bio: "" }
+      organization: "Media organization", photo: "", bio: "" },
+     { id: "exec-member", order: 9, draft: true, name: "Name to be added", nameBn: "নাম যুক্ত করা হবে", role: "Executive Member", roleBn: "কার্যনির্বাহী সদস্য", organization: "Media organization", photo: "", bio: "" }
   ],
 
   /* Messages shown on the Leadership page (leave text "" to hide). */
@@ -97,13 +98,13 @@ window.PBPC = {
      fee: write the approved amount, e.g. "$25". Leave "" to show "To be announced".
      period: "per year" or "one time".                                       */
   membership: [
-    { name: "Regular Member", nameBn: "সাধারণ সদস্য", fee: "", period: "per year", periodBn: "প্রতি বছর",
+     { name: "Regular Member", nameBn: "সাধারণ সদস্য", fee: "$75", period: "for 2 years", periodBn: "২ বছরের জন্য",
       eligibility: "Working journalists and media professionals of Bangladeshi origin living in Pennsylvania.",
       eligibilityBn: "পেনসিলভানিয়ায় বসবাসরত বাংলাদেশি বংশোদ্ভূত কর্মরত সাংবাদিক ও গণমাধ্যমকর্মী।" },
-    { name: "Life Member", nameBn: "আজীবন সদস্য", fee: "", period: "one time", periodBn: "এককালীন",
+     { name: "Life Member", nameBn: "আজীবন সদস্য", fee: "$600", period: "one time", periodBn: "এককালীন",
       eligibility: "Regular members who wish to support PBPC with a one-time lifetime membership.",
       eligibilityBn: "যেসব সাধারণ সদস্য এককালীন আজীবন সদস্যপদ নিয়ে PBPC-কে সহায়তা করতে চান।", featured: true },
-    { name: "Student Member", nameBn: "ছাত্র সদস্য", fee: "", period: "per year", periodBn: "প্রতি বছর",
+     { name: "Student Member", nameBn: "ছাত্র সদস্য", fee: "Free", period: "with valid student ID", periodBn: "বৈধ ছাত্র পরিচয়পত্রসহ",
       eligibility: "Students of journalism, communication or media studies.",
       eligibilityBn: "সাংবাদিকতা, যোগাযোগ বা গণমাধ্যম বিষয়ে অধ্যয়নরত শিক্ষার্থী।" }
   ],
