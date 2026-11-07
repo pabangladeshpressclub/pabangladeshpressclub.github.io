@@ -1,0 +1,60 @@
+name: Deploy website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Unpack uploaded zip (if any)
+        run: |
+          for z in *.zip; do
+            [ -f "$z" ] || continue
+            rm -rf /tmp/unz && mkdir -p /tmp/unz
+            unzip -q -o "$z" -d /tmp/unz
+            src=/tmp/unz
+            if [ ! -f "$src/index.html" ]; then
+              inner=$(dirname "$(find /tmp/unz -name index.html | head -n 1)")
+              [ -n "$inner" ] && src="$inner"
+            fi
+            cp -r "$src"/. .
+            rm -rf ./__MACOSX
+            git rm -q --cached "$z" || true
+            rm -f "$z"
+          done
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "Unpack website files"
+            git push
+          fi
+
+      - name: Prepare site
+        run: |
+          mkdir -p /tmp/site
+          tar --exclude=./.git --exclude=./.github -cf - . | tar -xf - -C /tmp/site
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: /tmp/site
+      - id: deployment
+        uses: actions/deploy-pages@v4
