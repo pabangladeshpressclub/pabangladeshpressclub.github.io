@@ -170,6 +170,18 @@
   ],
   "events": [
     {
+      "id": "first-meeting",
+      "draft": false,
+      "title": "First Meeting of PBPC",
+      "titleBn": "পিবিপিসির প্রথম সভা",
+      "date": "2026-11-19",
+      "time": "6:00 PM",
+      "venue": "Pennsylvania, USA",
+      "image": "",
+      "registrationUrl": "",
+      "description": "The first meeting of the Pennsylvania Bangladesh Press Club will be held today, Thursday, November 19, 2026, at 6:00 PM. All members are requested to attend on time."
+    },
+    {
       "id": "agm",
       "draft": true,
       "title": "Annual General Meeting",
