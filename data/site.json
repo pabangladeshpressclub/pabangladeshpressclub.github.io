@@ -207,6 +207,15 @@
       "photo": "/assets/photos/members/image.jpg"
     },
     {
+      "id": "sheikh-md-khorshan",
+      "draft": false,
+      "name": "Sheikh Md. Khorshan",
+      "city": "Philadelphia, USA",
+      "organization": "Bangla News",
+      "designation": "Editor",
+      "photo": ""
+    },
+    {
       "id": "sample-1",
       "draft": true,
       "name": "Member name",
