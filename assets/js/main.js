@@ -194,7 +194,7 @@
   function newsCard(n) {
     return '<article class="news-card">' +
       '<a class="news-img" href="news.html?id=' + esc(n.id) + '" tabindex="-1" aria-hidden="true">' +
-        (n.image ? '<img src="assets/photos/news/' + esc(n.image) + '" alt="" loading="lazy">' : '<div class="news-img-ph"><img src="assets/img/pbpc-logo-512.png" alt=""></div>') + "</a>" +
+        (n.image ? '<img src="' + (/^https?:/.test(n.image) ? "" : "assets/photos/news/") + esc(n.image) + '" alt="" loading="lazy">' : '<div class="news-img-ph"><img src="assets/img/pbpc-logo-512.png" alt=""></div>') + "</a>" +
       '<div class="news-body">' + badge(n) + '<p class="news-meta"><span class="cat">' + esc(n.category || "") + "</span> · " + esc(fmtDate(n.date)) + "</p>" +
       '<h3><a href="news.html?id=' + esc(n.id) + '">' + esc(L(n, "title")) + "</a></h3>" +
       "<p>" + esc(n.summary || "") + "</p>" +
@@ -365,7 +365,7 @@
         fill("#news-article-body",
           badge(n) + '<p class="news-meta"><span class="cat">' + esc(n.category || "") + "</span> · " + esc(fmtDate(n.date)) + (n.author ? " · " + esc(n.author) : "") + "</p>" +
           "<h1>" + esc(L(n, "title")) + "</h1>" +
-          (n.image ? '<img class="article-img" src="assets/photos/news/' + esc(n.image) + '" alt="">' : "") +
+          (n.image ? '<img class="article-img" src="' + (/^https?:/.test(n.image) ? "" : "assets/photos/news/") + esc(n.image) + '" alt="">' : "") +
           '<div class="article-text"><p>' + esc(n.body || n.summary || "").replace(/\n\n/g, "</p><p>") + "</p></div>" +
           '<div class="share">Share: <a href="https://www.facebook.com/sharer/sharer.php?u=' + share + '" target="_blank" rel="noopener">Facebook</a>' +
           '<a href="https://twitter.com/intent/tweet?url=' + share + '" target="_blank" rel="noopener">X</a>' +
