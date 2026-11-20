@@ -267,6 +267,15 @@
       "photo": "/assets/photos/members/sharafat-ali-khan.jpg"
     },
     {
+      "id": "maruf-noor",
+      "draft": false,
+      "name": "Maruf Noor",
+      "city": "Philadelphia, PA",
+      "organization": "New York Voice Bangla",
+      "designation": "Philadelphia Correspondent",
+      "photo": "/assets/photos/members/maruf-noor.jpg"
+    },
+    {
       "id": "sample-1",
       "draft": true,
       "name": "Member name",
