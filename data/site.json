@@ -240,6 +240,15 @@
       "photo": "/assets/photos/members/khorshan.jpg"
     },
     {
+      "id": "md-nazmul-haque",
+      "draft": false,
+      "name": "Md. Nazmul Haque",
+      "city": "USA",
+      "organization": "New York Voice Bangla",
+      "designation": "US Correspondent",
+      "photo": "https://newyorkvoicebangla.com/uploads/team/4-6ad002bd43995.png"
+    },
+    {
       "id": "sample-1",
       "draft": true,
       "name": "Member name",
