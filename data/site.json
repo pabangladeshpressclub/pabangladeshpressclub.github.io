@@ -249,6 +249,15 @@
       "photo": "https://newyorkvoicebangla.com/uploads/team/4-6ad002bd43995.png"
     },
     {
+      "id": "muhammad-omar-farooq",
+      "draft": false,
+      "name": "Muhammad Omar Farooq",
+      "city": "Pennsylvania",
+      "organization": "Pennsylvania Bangla News · New York Voice Bangla · Pennsylvania Correspondent",
+      "designation": "Assistant Editor",
+      "photo": "/assets/photos/members/omar-farooq.jpg"
+    },
+    {
       "id": "sample-1",
       "draft": true,
       "name": "Member name",
