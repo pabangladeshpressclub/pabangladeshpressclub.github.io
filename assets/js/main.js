@@ -98,8 +98,7 @@
     }).join("");
     el.innerHTML =
       '<div class="topbar"><div class="wrap topbar-in">' +
-        '<div class="topbar-l"><a href="mailto:' + esc(S.email) + '">' + icon("mail") + "<span>" + esc(S.email) + "</span></a>" +
-        '<span class="sep" aria-hidden="true"></span><span class="loc">' + icon("pin") + esc(S.location) + "</span></div>" +
+        '<div class="topbar-l"><span class="loc">' + icon("pin") + esc(S.location) + "</span></div>" +
         '<div class="topbar-r">' + socialLinks("tb-social") +
         '<button type="button" class="lang-btn" id="lang-btn" lang="' + (lang === "en" ? "bn" : "en") + '">' + esc(t("lang.switch")) + "</button>" +
         '<a class="tb-cta" href="membership.html#apply">' + esc(t("btn.become")) + "</a></div>" +
