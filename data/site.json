@@ -258,6 +258,15 @@
       "photo": "/assets/photos/members/omar-farooq-2.jpg"
     },
     {
+      "id": "sharafat-ali-khan",
+      "draft": false,
+      "name": "Sharafat Ali Khan",
+      "city": "Delaware County, PA",
+      "organization": "New York Voice Bangla",
+      "designation": "Delaware County Correspondent",
+      "photo": "/assets/photos/members/sharafat-ali-khan.jpg"
+    },
+    {
       "id": "sample-1",
       "draft": true,
       "name": "Member name",
