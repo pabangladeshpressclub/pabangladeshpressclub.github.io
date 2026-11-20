@@ -31,7 +31,7 @@
   }
   function initials(n) { return (n || "PB").split(/\s+/).filter(Boolean).slice(0, 2).map(function (w) { return w[0]; }).join("").toUpperCase(); }
   function avatar(photo, folder, name) {
-    if (photo) return '<img src="assets/photos/' + folder + "/" + esc(photo) + '" alt="' + esc(name) + '" loading="lazy">';
+    if (photo) return '<img src="' + (/^https?:/.test(photo) ? "" : "assets/photos/" + folder + "/") + esc(photo) + '" alt="' + esc(name) + '" loading="lazy">';
     return '<div class="avatar-ph" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4.2"/><path d="M3.5 21c.9-4.4 4.3-7 8.5-7s7.6 2.6 8.5 7"/></svg></div>';
   }
   function applyUrl() {
