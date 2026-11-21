@@ -281,6 +281,7 @@ html.lang-bn .hero h1 { line-height: 1.25; }
 .g-item { padding: 0; border: 0; cursor: zoom-in; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 6px; background: var(--gray); max-width: 100%; }
 .g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
 .g-item:hover img { transform: scale(1.05); }
+.g-item img[src$="poster.jpg"] { object-fit: contain; background: #06162E; }
 .gallery-empty { grid-column: 1 / -1; border: 2px dashed var(--line); border-radius: var(--radius); padding: 34px 20px; text-align: center; color: var(--muted); background: #fff; }
 .gallery-empty img { width: 70px; margin: 0 auto 12px; opacity: .85; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
