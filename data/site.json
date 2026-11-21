@@ -312,6 +312,19 @@
       "photo": ""
     }
   ],
-  "gallery": [],
+  "gallery": [
+    {
+      "album": "সদস্য হওয়ার আহ্বান",
+      "category": "Community Events",
+      "date": "2026-11-21",
+      "folder": ".",
+      "photos": [
+        {
+          "file": "membership-poster.jpg",
+          "caption": "পেনসিলভেনিয়া বাংলাদেশ প্রেস ক্লাব — সদস্য হওয়ার আহ্বান"
+        }
+      ]
+    }
+  ],
   "credentials": []
 }
